@@ -1,0 +1,29 @@
+Private Sub cmdReset_Click()
+
+ Dim msgValue As VbMsgBoxResult
+    
+    msgValue = MsgBox("Adakah anda ingin reset data?", vbYesNo + vbInformation, "Pengesahan")
+    
+    If msgValue = vbNo Then Exit Sub
+    
+    Call Reset
+
+End Sub
+
+Private Sub cmdSimpan_Click()
+Dim msgValue As VbMsgBoxResult
+    
+    msgValue = MsgBox("Adakah anda ingin menyimpan data?", vbYesNo + vbInformation, "Pengesahan")
+    
+    If msgValue = vbNo Then Exit Sub
+    
+    Call Submit
+    Call Reset
+    
+End Sub
+
+Private Sub UserForm_Initialize()
+
+    Call Reset
+    
+End Sub
